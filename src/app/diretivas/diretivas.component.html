@@ -4,3 +4,41 @@
 <ng-template #elseBlock>
     <p>false</p>
 </ng-template>
+
+<hr>
+
+<h1>for loop</h1>
+
+<ul>
+    <li *ngFor="let item of list; let i = index;" (click)="onClickEventList(i)" >
+        {{item.nome}} -- id {{i}}
+    </li>
+</ul>
+<button (click)="onClickAdd()">add at list</button>
+
+<hr> <br>
+
+<h2>switch</h2>
+
+<input type="text" [(ngModel)]="nome">
+
+<div [ngSwitch]="nome">
+    <p *ngSwitchCase="'Luca'">
+        Luca
+    </p>
+    <p *ngSwitchCase="'Lara'">
+        Lara
+    </p>
+    <p *ngSwitchDefault>
+        nao existe
+    </p>
+</div>
+
+<hr>
+
+<h2>ng class</h2>
+
+<button (click)="changeValueClass()">change color</button>
+<p [ngClass]="{'active': valorclass, 'disabled': !valorclass }">
+    Ng class
+</p>
