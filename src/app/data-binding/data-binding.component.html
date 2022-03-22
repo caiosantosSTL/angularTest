@@ -1,0 +1,27 @@
+<h1>Interpolation</h1>
+<p>{{ nome }} e idade de  {{idade}}</p>
+<p>{{idade > 50}}</p>
+
+<hr>
+
+<h1>Property binding</h1>
+
+<button [disabled]="itWasDisabled">Botao</button> <br>
+<img [src]="imgFonte" style="width: 20%;" alt="">
+
+<hr>
+<h1>Event binding</h1>
+
+<button (click)="alertInfo($event)">alert boton</button>
+
+<div (mousemove)="mouseMove($event)" style="background-color: rgb(236, 236, 157); width: 400px; height: 400px;">
+<p>{{position.x}} ** {{position.y}}</p>
+
+
+</div>
+
+<hr>
+
+<h1>two way</h1> <!-- add on app modules-->
+<input [(ngModel)]="nome"  >
+{{nome}}
